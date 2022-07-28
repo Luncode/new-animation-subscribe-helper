@@ -1,0 +1,55 @@
+{
+  "name": "new-animation-subscribe-helper",
+  "private": true,
+  "version": "0.0.1",
+  "type": "commonjs",
+  "main": "DesktopConfig/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "electron": "wait-on tcp:3000 && cross-env NODE_ENV=development electron .",
+    "electron:dev": "concurrently -k \"yarn dev\" \"yarn electron\"",
+    "electron:build": "vite build && electron-builder --dir",
+    "gen:api": "node genApi/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "swiper": "^5.4.5",
+    "vue": "^3.2.37",
+    "vue-awesome-swiper": "^5.0.1",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.0",
+    "concurrently": "^7.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^19.0.8",
+    "electron-builder": "^23.1.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0",
+    "vue-tsc": "^0.38.4",
+    "wait-on": "^6.0.1"
+  },
+  "build": {
+    "appId": "com.luncode.nash",
+    "productName": "新番订阅助手 - (^///^)",
+    "copyright": "Copyright © 2022 Luncode",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "packElevateHelper": false
+    },
+    "files": [
+      "dist/**/*",
+      "DesktopConfig/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist_electron_release"
+    }
+  }
+}
