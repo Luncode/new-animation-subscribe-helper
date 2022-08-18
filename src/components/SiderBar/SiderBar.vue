@@ -11,7 +11,7 @@
     </div>
     <div class="SiderBarNav down">
       <div class="SiderBarNavItem">icon</div>
-      <router-link to="/Settings" class="SiderBarNavItem">Settings</router-link>
+      <router-link to="/Settings" class="SiderBarNavItem">设置中心</router-link>
       <!-- <div class="SiderBarNavItem">Setting</div> -->
     </div>
   </div>

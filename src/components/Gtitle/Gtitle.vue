@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Ref } from 'vue'
+import {defineComponent} from 'vue'
 defineProps<{ msg: string }>()
 </script>
 <template>

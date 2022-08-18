@@ -1,11 +1,13 @@
 <script setup lang="ts">
+  import Gtitle from "../../components/Gtitle/Gtitle.vue";
+  
 </script>
 
 <template>
   <div class="Settings">
-    <router-link to="/" >返回</router-link> Setting (设置中心)
-    <div>About</div>
-    <div>Vertion：</div>
+    <Gtitle msg="设置中心"/>
+    <div>About： --新番订阅助手  基于Electron + VUE + TS 开发</div>
+    <div>Vertion：1.0.0</div>
   </div>
 </template>
 

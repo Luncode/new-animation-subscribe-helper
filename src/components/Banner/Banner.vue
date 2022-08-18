@@ -1,24 +1,23 @@
 <template>
-    <div id="swipercom">
-        <div class="swiper-container" id="swiperIndex">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="https://www.luncode.com/res/K-ON.JPG" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://www.luncode.com/res/K-ON2.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://www.luncode.com/res/bg.jpg" alt="">
-                </div>
-            </div>
-            <div class="swiper-pagination">
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <!-- <div class="swiper-scrollbar"></div> -->
+  <div id="swipercom">
+    <div class="swiper-container" id="swiperIndex">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://www.luncode.com/res/K-ON.JPG" alt="" />
         </div>
+        <div class="swiper-slide">
+          <img src="https://www.luncode.com/res/K-ON2.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://www.luncode.com/res/bg.jpg" alt="" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- <div class="swiper-scrollbar"></div> -->
     </div>
+  </div>
 </template>
 
 <script lang="js">
@@ -36,8 +35,10 @@
         mounted() {
             var mySwiper=new Swiper('#swiperIndex',{
                 //配置分页器内容
-
                 loop: true, // 循环模式选项
+                autoplay: {
+                    delay: 4000,//1秒切换一次
+                },
                 pagination:{
                     el:".swiper-pagination",//换页器与哪个标签关联
                     clickable:true//分页器是否可以点击
@@ -67,5 +68,4 @@
 #swipercom #swiperIndex.swiper-container .swiper-pagination-bullet-active {
   background-color: orangered;
 }
-
 </style>

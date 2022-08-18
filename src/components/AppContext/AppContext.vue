@@ -55,8 +55,17 @@ const clickLink = (url:string) => {
 
 <style scoped>
 .AppContainer{
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     height: calc(100vh - 40px);
+    padding: 5px;
+}
+.AppContainer::-webkit-scrollbar{
+  width: 5px;
+}
+.AppContainer::-webkit-scrollbar-thumb{
+  background: #5f5e5e;
+  border-radius: 15px;
 }
 .newAnimation {
   box-sizing: content-box;
